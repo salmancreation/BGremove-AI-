@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-primary: #00629f;
+  --color-primary-container: #009af6;
+  --color-on-primary: #ffffff;
+  --color-surface: #f8f9ff;
+  --color-surface-container: #eaeef7;
+  --color-surface-container-low: #eff4fd;
+  --color-surface-container-lowest: #ffffff;
+  --color-on-surface: #171c22;
+  --color-on-surface-variant: #3f4752;
+  --color-outline-variant: #bfc7d4;
+  --color-tertiary-fixed: #e9ddff;
+  --color-on-tertiary-fixed: #23005c;
+
+  --radius-default: 1rem;
+  --radius-lg: 2rem;
+  --radius-xl: 3rem;
+}
+
+@layer base {
+  body {
+    @apply bg-surface text-on-surface font-sans antialiased;
+  }
+}
+
+.checkerboard {
+  background-image: linear-gradient(45deg, #dee3ec 25%, transparent 25%), 
+                    linear-gradient(-45deg, #dee3ec 25%, transparent 25%), 
+                    linear-gradient(45deg, transparent 75%, #dee3ec 75%), 
+                    linear-gradient(-45deg, transparent 75%, #dee3ec 75%);
+  background-size: 20px 20px;
+  background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+  background-color: #ffffff;
+}
+
+.glass-panel {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+}
