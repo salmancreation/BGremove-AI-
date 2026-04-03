@@ -52,8 +52,8 @@ export default function Workspace({ onProcessComplete }: WorkspaceProps) {
     <div className="max-w-5xl mx-auto px-6 py-12 md:py-20">
       <header className="text-center mb-12 md:mb-20 space-y-6">
         <span className="inline-block px-4 py-1.5 bg-indigo-100 text-indigo-700 rounded-full font-black uppercase tracking-widest text-[10px]">AI Workspace</span>
-        <h1 className="text-4xl md:text-6xl font-black tracking-tight text-on-surface">Elevate Your Canvas.</h1>
-        <p className="text-on-surface-variant text-base md:text-lg max-w-2xl mx-auto font-medium">
+        <h1 className="text-3xl md:text-6xl font-black tracking-tight text-on-surface leading-tight">Elevate Your Canvas.</h1>
+        <p className="text-on-surface-variant text-sm md:text-lg max-w-2xl mx-auto font-medium">
           Upload an image and watch the AI refine your visual into a professional-grade asset using high-precision neural networks.
         </p>
       </header>
@@ -80,11 +80,11 @@ export default function Workspace({ onProcessComplete }: WorkspaceProps) {
                 <Upload size={32} className="text-primary md:size-[40px]" />
               </div>
               <div className="space-y-2">
-                <h3 className="text-2xl md:text-3xl font-black">Click to upload image</h3>
-                <p className="text-on-surface-variant font-bold text-sm md:text-base">Transform your photos instantly with editorial precision.</p>
+                <h3 className="text-xl md:text-3xl font-black">Click to upload image</h3>
+                <p className="text-on-surface-variant font-bold text-xs md:text-base">Transform your photos instantly with editorial precision.</p>
               </div>
-              <button className="w-full md:w-auto bg-gradient-to-br from-primary to-primary-container text-white px-8 md:px-10 py-4 md:py-5 rounded-2xl font-black text-lg shadow-2xl shadow-primary/20 flex items-center justify-center gap-3">
-                <ImageIcon size={20} className="md:size-[24px]" />
+              <button className="w-full md:w-auto bg-gradient-to-br from-primary to-primary-container text-white px-6 py-3.5 md:px-10 md:py-5 rounded-2xl font-black text-base md:text-lg shadow-2xl shadow-primary/20 flex items-center justify-center gap-3">
+                <ImageIcon size={18} className="md:size-[24px]" />
                 Choose File
               </button>
               <div className="flex flex-wrap justify-center gap-2 md:gap-3">

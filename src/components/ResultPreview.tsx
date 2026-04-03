@@ -108,23 +108,23 @@ export default function ResultPreview({ image, onReset }: ResultPreviewProps) {
             className="bg-white rounded-3xl p-8 md:p-10 space-y-6 md:space-y-8 shadow-2xl shadow-primary/5 border border-outline-variant/10"
           >
             <div className="space-y-4">
-              <h1 className="text-3xl md:text-4xl font-black tracking-tight text-on-surface">Image Ready</h1>
-              <p className="text-on-surface-variant leading-relaxed font-medium text-sm md:text-base">Your background has been removed with magical precision. Download your high-quality asset below.</p>
+              <h1 className="text-2xl md:text-4xl font-black tracking-tight text-on-surface">Image Ready</h1>
+              <p className="text-on-surface-variant leading-relaxed font-medium text-xs md:text-base">Your background has been removed with magical precision. Download your high-quality asset below.</p>
             </div>
 
             <div className="space-y-4">
               <button 
                 onClick={() => handleDownload('png')}
-                className="w-full bg-gradient-to-br from-primary to-primary-container text-white py-4 md:py-5 rounded-2xl font-black text-lg flex items-center justify-center gap-3 shadow-2xl shadow-primary/30 hover:scale-[1.02] transition-transform active:scale-95"
+                className="w-full bg-gradient-to-br from-primary to-primary-container text-white py-3.5 md:py-5 rounded-2xl font-black text-base md:text-lg flex items-center justify-center gap-3 shadow-2xl shadow-primary/30 hover:scale-[1.02] transition-transform active:scale-95"
               >
-                <Download size={24} />
+                <Download size={20} className="md:size-[24px]" />
                 Download PNG
               </button>
               <button 
                 onClick={() => handleDownload('jpg')}
-                className="w-full bg-surface-container-lowest text-primary border-2 border-outline-variant/30 py-4 md:py-5 rounded-2xl font-black text-lg flex items-center justify-center gap-3 hover:bg-surface-container-high transition-colors"
+                className="w-full bg-surface-container-lowest text-primary border-2 border-outline-variant/30 py-3.5 md:py-5 rounded-2xl font-black text-base md:text-lg flex items-center justify-center gap-3 hover:bg-surface-container-high transition-colors"
               >
-                <ImageIcon size={24} />
+                <ImageIcon size={20} className="md:size-[24px]" />
                 Download JPG
               </button>
             </div>

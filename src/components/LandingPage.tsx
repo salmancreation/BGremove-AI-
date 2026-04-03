@@ -21,23 +21,23 @@ export default function LandingPage({ onStart }: LandingPageProps) {
               <Zap size={14} className="mr-2 fill-indigo-700" />
               New v4.0 AI Model
             </span>
-            <h1 className="text-6xl md:text-7xl font-black tracking-tighter text-on-surface leading-[1.05]">
+            <h1 className="text-4xl md:text-7xl font-black tracking-tighter text-on-surface leading-[1.1] md:leading-[1.05]">
               Remove Image Background <span className="bg-gradient-to-r from-primary to-primary-container bg-clip-text text-transparent">Instantly</span> with AI
             </h1>
-            <p className="text-xl text-on-surface-variant max-w-lg leading-relaxed font-medium">
+            <p className="text-lg md:text-xl text-on-surface-variant max-w-lg leading-relaxed font-medium">
               Upload any image and get a clean transparent background in seconds. Precision edge detection for hair, fur, and complex details.
             </p>
           </div>
 
-          <div className="flex flex-wrap gap-4 pt-4">
+          <div className="flex flex-wrap gap-3 md:gap-4 pt-4">
             <button 
               onClick={onStart}
-              className="bg-gradient-to-br from-primary to-primary-container text-white px-8 py-5 rounded-2xl font-bold text-lg flex items-center gap-3 shadow-2xl shadow-primary/30 hover:scale-[1.02] transition-all active:scale-95"
+              className="bg-gradient-to-br from-primary to-primary-container text-white px-6 py-4 md:px-8 md:py-5 rounded-2xl font-bold text-base md:text-lg flex items-center gap-3 shadow-2xl shadow-primary/30 hover:scale-[1.02] transition-all active:scale-95"
             >
-              <Upload size={24} />
+              <Upload size={20} className="md:size-[24px]" />
               Upload Image
             </button>
-            <button className="px-8 py-5 rounded-2xl border-2 border-outline-variant text-primary font-bold text-lg hover:bg-surface-container-high transition-all active:scale-95">
+            <button className="px-6 py-4 md:px-8 md:py-5 rounded-2xl border-2 border-outline-variant text-primary font-bold text-base md:text-lg hover:bg-surface-container-high transition-all active:scale-95">
               Try Demo
             </button>
           </div>
@@ -115,8 +115,8 @@ export default function LandingPage({ onStart }: LandingPageProps) {
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center max-w-2xl mx-auto mb-20 space-y-4">
             <span className="text-primary font-black tracking-[0.3em] text-[10px] uppercase block">Capabilities</span>
-            <h2 className="text-5xl font-black tracking-tight">Why choose BGremove?</h2>
-            <p className="text-on-surface-variant text-lg font-medium">Sophisticated algorithms that understand depth, hair, and complex edges.</p>
+            <h2 className="text-3xl md:text-5xl font-black tracking-tight">Why choose BGremove?</h2>
+            <p className="text-on-surface-variant text-base md:text-lg font-medium">Sophisticated algorithms that understand depth, hair, and complex edges.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -136,7 +136,7 @@ export default function LandingPage({ onStart }: LandingPageProps) {
                 <div className="w-14 h-14 rounded-2xl bg-surface-container-high flex items-center justify-center mb-8 group-hover:bg-white transition-colors text-primary">
                   {feature.icon}
                 </div>
-                <h3 className="text-2xl font-black mb-4">{feature.title}</h3>
+                <h3 className="text-xl md:text-2xl font-black mb-4">{feature.title}</h3>
                 <p className="text-on-surface-variant leading-relaxed font-medium">{feature.desc}</p>
               </motion.div>
             ))}
@@ -148,8 +148,8 @@ export default function LandingPage({ onStart }: LandingPageProps) {
       <section className="py-32 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-20 space-y-4">
-            <h2 className="text-5xl font-black tracking-tight">Simple, transparent pricing</h2>
-            <p className="text-on-surface-variant text-lg font-medium">Choose the plan that's right for your creative workflow.</p>
+            <h2 className="text-3xl md:text-5xl font-black tracking-tight">Simple, transparent pricing</h2>
+            <p className="text-on-surface-variant text-base md:text-lg font-medium">Choose the plan that's right for your creative workflow.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -162,7 +162,7 @@ export default function LandingPage({ onStart }: LandingPageProps) {
                 <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-sm">
                   <Zap size={24} className="text-on-surface-variant" />
                 </div>
-                <h3 className="text-2xl font-black mb-2">Starter</h3>
+                <h3 className="text-xl md:text-2xl font-black mb-2">Starter</h3>
                 <p className="text-on-surface-variant text-sm font-bold">Perfect for occasional use</p>
               </div>
               <div className="flex items-baseline gap-1 mb-10">
@@ -192,7 +192,7 @@ export default function LandingPage({ onStart }: LandingPageProps) {
                 <div className="w-12 h-12 bg-primary rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-primary/20">
                   <Zap size={24} className="text-white fill-white" />
                 </div>
-                <h3 className="text-2xl font-black mb-2">Pro Artist</h3>
+                <h3 className="text-xl md:text-2xl font-black mb-2">Pro Artist</h3>
                 <p className="text-white/60 text-sm font-bold">For power users & pros</p>
               </div>
               <div className="flex items-baseline gap-1 mb-10">
@@ -221,7 +221,7 @@ export default function LandingPage({ onStart }: LandingPageProps) {
                 <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-sm">
                   <Cloud size={24} className="text-on-surface-variant" />
                 </div>
-                <h3 className="text-2xl font-black mb-2">Business</h3>
+                <h3 className="text-xl md:text-2xl font-black mb-2">Business</h3>
                 <p className="text-on-surface-variant text-sm font-bold">For creative teams</p>
               </div>
               <div className="flex items-baseline gap-1 mb-10">

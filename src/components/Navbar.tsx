@@ -13,7 +13,7 @@ export default function Navbar({ onNavigate }: NavbarProps) {
     <nav className="sticky top-0 z-50 w-full bg-white/70 backdrop-blur-xl border-b border-outline-variant/10">
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         <div 
-          className="text-2xl font-extrabold tracking-tighter text-slate-900 cursor-pointer"
+          className="text-xl md:text-2xl font-extrabold tracking-tighter text-slate-900 cursor-pointer"
           onClick={() => onNavigate('landing')}
         >
           BGremove
@@ -50,15 +50,15 @@ export default function Navbar({ onNavigate }: NavbarProps) {
           animate={{ opacity: 1, y: 0 }}
           className="md:hidden bg-white border-b border-outline-variant/10 px-6 py-8 flex flex-col gap-6"
         >
-          <button onClick={() => { onNavigate('landing'); setIsOpen(false); }} className="text-lg font-bold text-left">Features</button>
-          <button className="text-lg font-bold text-left">Pricing</button>
-          <button className="text-lg font-bold text-left">API</button>
-          <button className="text-lg font-bold text-left">Showcase</button>
+          <button onClick={() => { onNavigate('landing'); setIsOpen(false); }} className="text-base font-bold text-left">Features</button>
+          <button className="text-base font-bold text-left">Pricing</button>
+          <button className="text-base font-bold text-left">API</button>
+          <button className="text-base font-bold text-left">Showcase</button>
           <hr className="border-outline-variant/20" />
-          <button className="text-lg font-bold text-left">Sign In</button>
+          <button className="text-base font-bold text-left">Sign In</button>
           <button 
             onClick={() => { onNavigate('workspace'); setIsOpen(false); }}
-            className="bg-primary text-white py-4 rounded-xl font-bold text-center"
+            className="bg-primary text-white py-3.5 rounded-xl font-bold text-center text-base"
           >
             Try for Free
           </button>
