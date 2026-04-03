@@ -41,7 +41,7 @@ export default function Footer() {
         </div>
 
         <div className="pt-8 border-t border-outline-variant/20 flex flex-col md:row justify-between items-center gap-6">
-          <p className="text-sm text-slate-400 font-medium">© 2026 BGremove. Powered by AI.</p>
+          <p className="text-sm text-slate-400 font-medium">© 2026 BGremove. Powered by Salman AI.</p>
           <div className="flex items-center gap-6">
             <button className="text-slate-400 hover:text-primary transition-colors"><Globe size={20} /></button>
             <button className="text-slate-400 hover:text-primary transition-colors"><Settings size={20} /></button>

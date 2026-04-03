@@ -1,11 +1,13 @@
 import { motion } from "motion/react";
-import { Upload, Zap, Target, Smartphone, Cloud, ShieldCheck, Download, CheckCircle2, XCircle } from "lucide-react";
+import { Upload, Zap, Target, Smartphone, Cloud, ShieldCheck, Download, CheckCircle2, XCircle, Star, Sparkles } from "lucide-react";
+import Workspace from "./Workspace";
 
 interface LandingPageProps {
   onStart: () => void;
+  onProcessComplete: (imageUrl: string) => void;
 }
 
-export default function LandingPage({ onStart }: LandingPageProps) {
+export default function LandingPage({ onStart, onProcessComplete }: LandingPageProps) {
   return (
     <div className="overflow-hidden">
       {/* Hero Section */}
@@ -110,6 +112,13 @@ export default function LandingPage({ onStart }: LandingPageProps) {
         </motion.div>
       </section>
 
+      {/* Upload Section */}
+      <section id="upload-section" className="pb-20 bg-surface-container-lowest">
+        <div className="max-w-7xl mx-auto px-6">
+          <Workspace onProcessComplete={onProcessComplete} />
+        </div>
+      </section>
+
       {/* Features Grid */}
       <section className="bg-surface-container-low py-32">
         <div className="max-w-7xl mx-auto px-6">
@@ -121,19 +130,19 @@ export default function LandingPage({ onStart }: LandingPageProps) {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { icon: <Zap />, title: "Fast AI Processing", desc: "Get results in under 3 seconds, regardless of image complexity or size." },
-              { icon: <Target />, title: "High Accuracy", desc: "Industry-leading edge detection that handles fine hair and transparent objects." },
-              { icon: <Smartphone />, title: "Mobile Friendly", desc: "Perfectly optimized for mobile browsers. Edit photos on the go." },
-              { icon: <Cloud />, title: "Cloud Based", desc: "No software installation required. Access your work from any device." },
-              { icon: <ShieldCheck />, title: "Secure", desc: "Images are automatically deleted after 24 hours to protect your privacy." },
-              { icon: <Download />, title: "Instant Download", desc: "One-click downloads in PNG, JPG, or SVG formats instantly." },
+              { icon: <Zap size={48} />, title: "Fast AI Processing", desc: "Get results in under 3 seconds, regardless of image complexity or size." },
+              { icon: <Target size={48} />, title: "High Accuracy", desc: "Industry-leading edge detection that handles fine hair and transparent objects." },
+              { icon: <Smartphone size={48} />, title: "Mobile Friendly", desc: "Perfectly optimized for mobile browsers. Edit photos on the go." },
+              { icon: <Cloud size={48} />, title: "Cloud Based", desc: "No software installation required. Access your work from any device." },
+              { icon: <ShieldCheck size={48} />, title: "Secure", desc: "Images are automatically deleted after 24 hours to protect your privacy." },
+              { icon: <Download size={48} />, title: "Instant Download", desc: "One-click downloads in PNG, JPG, or SVG formats instantly." },
             ].map((feature, idx) => (
               <motion.div 
                 key={idx}
                 whileHover={{ y: -8 }}
                 className="bg-surface-container-lowest p-10 rounded-3xl group transition-all duration-300 hover:bg-indigo-50"
               >
-                <div className="w-14 h-14 rounded-2xl bg-surface-container-high flex items-center justify-center mb-8 group-hover:bg-white transition-colors text-primary">
+                <div className="w-24 h-24 rounded-3xl bg-surface-container-high flex items-center justify-center mb-8 group-hover:bg-white transition-colors text-primary">
                   {feature.icon}
                 </div>
                 <h3 className="text-xl md:text-2xl font-black mb-4">{feature.title}</h3>
@@ -152,32 +161,32 @@ export default function LandingPage({ onStart }: LandingPageProps) {
             <p className="text-on-surface-variant text-base md:text-lg font-medium">Choose the plan that's right for your creative workflow.</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {/* Free Plan */}
             <motion.div 
               whileHover={{ y: -10 }}
-              className="bg-surface-container-low rounded-[2.5rem] p-10 flex flex-col border border-outline-variant/10 relative overflow-hidden"
+              className="bg-surface-container-low rounded-[2.5rem] p-10 md:p-12 flex flex-col border border-outline-variant/10 relative overflow-hidden group"
             >
               <div className="mb-10">
-                <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-sm">
-                  <Zap size={24} className="text-on-surface-variant" />
+                <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-transform">
+                  <Star size={28} className="text-on-surface-variant" />
                 </div>
-                <h3 className="text-xl md:text-2xl font-black mb-2">Starter</h3>
+                <h3 className="text-2xl md:text-3xl font-black mb-2">Starter</h3>
                 <p className="text-on-surface-variant text-sm font-bold">Perfect for occasional use</p>
               </div>
               <div className="flex items-baseline gap-1 mb-10">
-                <span className="text-5xl font-black">$0</span>
+                <span className="text-6xl font-black">$0</span>
                 <span className="text-on-surface-variant font-bold">/month</span>
               </div>
               <ul className="space-y-4 mb-12 flex-grow">
                 {['5 images per month', 'Standard resolution', 'Personal use only', 'Community support'].map((item, i) => (
-                  <li key={i} className="flex items-center gap-3 text-on-surface-variant font-bold text-sm">
-                    <CheckCircle2 size={18} className="text-primary flex-shrink-0" />
+                  <li key={i} className="flex items-center gap-3 text-on-surface-variant font-bold text-sm md:text-base">
+                    <CheckCircle2 size={20} className="text-primary flex-shrink-0" />
                     {item}
                   </li>
                 ))}
               </ul>
-              <button className="w-full py-4 rounded-2xl font-black border-2 border-primary text-primary hover:bg-primary/5 transition-colors">
+              <button className="w-full py-5 rounded-2xl font-black border-2 border-primary text-primary hover:bg-primary hover:text-white transition-all duration-300">
                 Get Started
               </button>
             </motion.div>
@@ -185,59 +194,30 @@ export default function LandingPage({ onStart }: LandingPageProps) {
             {/* Pro Plan */}
             <motion.div 
               whileHover={{ y: -10 }}
-              className="bg-on-surface rounded-[2.5rem] p-10 flex flex-col border-4 border-primary shadow-2xl shadow-primary/20 relative overflow-hidden text-white"
+              className="bg-slate-900 rounded-[2.5rem] p-10 md:p-12 flex flex-col border-4 border-primary shadow-2xl shadow-primary/20 relative overflow-hidden text-white group"
             >
-              <div className="absolute top-6 right-6 bg-primary text-white px-4 py-1.5 font-black text-[10px] uppercase tracking-widest rounded-full">Popular</div>
+              <div className="absolute top-8 right-8 bg-primary text-white px-5 py-2 font-black text-[10px] uppercase tracking-widest rounded-full animate-pulse">Best Value</div>
               <div className="mb-10">
-                <div className="w-12 h-12 bg-primary rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-primary/20">
-                  <Zap size={24} className="text-white fill-white" />
+                <div className="w-14 h-14 bg-primary rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-primary/20 group-hover:rotate-12 transition-transform">
+                  <Sparkles size={28} className="text-white fill-white" />
                 </div>
-                <h3 className="text-xl md:text-2xl font-black mb-2">Pro Artist</h3>
+                <h3 className="text-2xl md:text-3xl font-black mb-2">Pro Artist</h3>
                 <p className="text-white/60 text-sm font-bold">For power users & pros</p>
               </div>
               <div className="flex items-baseline gap-1 mb-10">
-                <span className="text-5xl font-black">$15</span>
+                <span className="text-6xl font-black">$15</span>
                 <span className="text-white/60 font-bold">/month</span>
               </div>
               <ul className="space-y-4 mb-12 flex-grow">
                 {['Unlimited images', '4K Ultra HD resolution', 'Commercial license', 'Priority AI processing', 'Batch background removal'].map((item, i) => (
-                  <li key={i} className="flex items-center gap-3 text-white/90 font-bold text-sm">
-                    <CheckCircle2 size={18} className="text-primary-container flex-shrink-0" />
+                  <li key={i} className="flex items-center gap-3 text-white/90 font-bold text-sm md:text-base">
+                    <CheckCircle2 size={20} className="text-primary-container flex-shrink-0" />
                     {item}
                   </li>
                 ))}
               </ul>
-              <button className="w-full py-4 rounded-2xl font-black bg-gradient-to-br from-primary to-primary-container text-white shadow-xl shadow-primary/30 hover:scale-[1.02] transition-transform">
+              <button className="w-full py-5 rounded-2xl font-black bg-gradient-to-br from-primary to-primary-container text-white shadow-xl shadow-primary/30 hover:scale-[1.02] transition-transform">
                 Go Pro Now
-              </button>
-            </motion.div>
-
-            {/* Business Plan */}
-            <motion.div 
-              whileHover={{ y: -10 }}
-              className="bg-surface-container-low rounded-[2.5rem] p-10 flex flex-col border border-outline-variant/10 relative overflow-hidden"
-            >
-              <div className="mb-10">
-                <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-sm">
-                  <Cloud size={24} className="text-on-surface-variant" />
-                </div>
-                <h3 className="text-xl md:text-2xl font-black mb-2">Business</h3>
-                <p className="text-on-surface-variant text-sm font-bold">For creative teams</p>
-              </div>
-              <div className="flex items-baseline gap-1 mb-10">
-                <span className="text-5xl font-black">$49</span>
-                <span className="text-on-surface-variant font-bold">/month</span>
-              </div>
-              <ul className="space-y-4 mb-12 flex-grow">
-                {['Everything in Pro', 'Team collaboration', 'API access (10k calls)', 'Dedicated account manager', 'Custom AI fine-tuning'].map((item, i) => (
-                  <li key={i} className="flex items-center gap-3 text-on-surface-variant font-bold text-sm">
-                    <CheckCircle2 size={18} className="text-primary flex-shrink-0" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-              <button className="w-full py-4 rounded-2xl font-black border-2 border-on-surface text-on-surface hover:bg-on-surface/5 transition-colors">
-                Contact Sales
               </button>
             </motion.div>
           </div>

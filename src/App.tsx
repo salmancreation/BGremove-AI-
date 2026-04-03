@@ -36,17 +36,20 @@ export default function App() {
             transition={{ duration: 0.3, ease: "easeInOut" }}
           >
             {currentScreen === 'landing' && (
-              <LandingPage onStart={() => navigate('workspace')} />
-            )}
-            {currentScreen === 'workspace' && (
-              <Workspace onProcessComplete={handleProcessComplete} />
+              <LandingPage 
+                onStart={() => {
+                  const uploadSection = document.getElementById('upload-section');
+                  uploadSection?.scrollIntoView({ behavior: 'smooth' });
+                }} 
+                onProcessComplete={handleProcessComplete}
+              />
             )}
             {currentScreen === 'result' && (
               <ResultPreview 
                 image={uploadedImage} 
                 onReset={() => {
                   setUploadedImage(null);
-                  navigate('workspace');
+                  navigate('landing');
                 }} 
               />
             )}
