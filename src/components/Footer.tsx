@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
           <div className="col-span-1 md:col-span-1 space-y-6">
-            <div className="text-2xl font-extrabold tracking-tighter text-slate-900">BGremove</div>
+            <div className="text-2xl font-extrabold tracking-tighter text-slate-900">BGrremove</div>
             <p className="text-on-surface-variant text-sm leading-relaxed max-w-xs">
               Elevating your visual content with the power of artificial intelligence. Professional tools for modern creators.
             </p>
@@ -41,7 +41,7 @@ export default function Footer() {
         </div>
 
         <div className="pt-8 border-t border-outline-variant/20 flex flex-col md:row justify-between items-center gap-6">
-          <p className="text-sm text-slate-400 font-medium">© 2026 BGremove. Powered by Salman AI.</p>
+          <p className="text-sm text-slate-400 font-medium">© 2026 BGrremove. Powered by Salman AI.</p>
           <div className="flex items-center gap-6">
             <button className="text-slate-400 hover:text-primary transition-colors"><Globe size={20} /></button>
             <button className="text-slate-400 hover:text-primary transition-colors"><Settings size={20} /></button>

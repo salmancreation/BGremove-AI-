@@ -23,6 +23,9 @@ export default function LandingPage({ onStart, onProcessComplete }: LandingPageP
               <Zap size={14} className="mr-2 fill-indigo-700" />
               New v4.0 AI Model
             </span>
+            <h1 className="text-4xl md:text-7xl font-black tracking-tighter text-on-surface leading-[1.1] md:leading-[1.05]">
+              Remove Image Background <span className="bg-gradient-to-r from-primary to-primary-container bg-clip-text text-transparent">Instantly</span> with AI
+            </h1>
             <p className="text-lg md:text-xl text-on-surface-variant max-w-lg leading-relaxed font-medium">
               Upload any image and get a clean transparent background in seconds. Precision edge detection for hair, fur, and complex details.
             </p>
@@ -121,7 +124,7 @@ export default function LandingPage({ onStart, onProcessComplete }: LandingPageP
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center max-w-2xl mx-auto mb-20 space-y-4">
             <span className="text-primary font-black tracking-[0.3em] text-[10px] uppercase block">Capabilities</span>
-            <h2 className="text-3xl md:text-5xl font-black tracking-tight">Why choose BGremove?</h2>
+            <h2 className="text-3xl md:text-5xl font-black tracking-tight">Why choose BGrremove?</h2>
             <p className="text-on-surface-variant text-base md:text-lg font-medium">Sophisticated algorithms that understand depth, hair, and complex edges.</p>
           </div>
 

@@ -16,7 +16,7 @@ export default function Navbar({ onNavigate }: NavbarProps) {
           className="text-xl md:text-2xl font-extrabold tracking-tighter text-slate-900 cursor-pointer"
           onClick={() => onNavigate('landing')}
         >
-          BGremove
+          BGrremove
         </div>
 
         {/* Desktop Menu */}
