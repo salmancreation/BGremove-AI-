@@ -23,9 +23,6 @@ export default function LandingPage({ onStart, onProcessComplete }: LandingPageP
               <Zap size={14} className="mr-2 fill-indigo-700" />
               New v4.0 AI Model
             </span>
-            <h1 className="text-4xl md:text-7xl font-black tracking-tighter text-on-surface leading-[1.1] md:leading-[1.05]">
-              Remove Image Background <span className="bg-gradient-to-r from-primary to-primary-container bg-clip-text text-transparent">Instantly</span> with AI
-            </h1>
             <p className="text-lg md:text-xl text-on-surface-variant max-w-lg leading-relaxed font-medium">
               Upload any image and get a clean transparent background in seconds. Precision edge detection for hair, fur, and complex details.
             </p>
